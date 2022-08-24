@@ -1,7 +1,12 @@
 <template>
   <main>
     <section>
-      <img src="@/assets/logo.svg" alt="Logo Minarox" />
+      <img
+        src="@/assets/logo.svg"
+        alt="Logo Minarox"
+        width="140"
+        height="auto"
+      />
       <h1>Minarox</h1>
     </section>
     <section>
