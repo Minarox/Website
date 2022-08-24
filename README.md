@@ -62,7 +62,6 @@ Website of the association Rv & Co promoting the productions and social networks
 - [VueJS 3](https://vuejs.org/)
 - [Sass](https://sass-lang.com/)
 - [Vue-i18n](https://vue-i18n.intlify.dev/)
-- [Vue-router](https://router.vuejs.org/)
 - [Fontawesome](https://fontawesome.com/)
 
 ### Color Reference
