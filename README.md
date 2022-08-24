@@ -10,7 +10,7 @@
 
 ![Website version](https://img.shields.io/github/package-json/v/Minarox/Maintenance?label=Version)&nbsp;
 ![Project License](https://img.shields.io/github/license/Minarox/Maintenance?label=License)&nbsp;
-![Website build size](https://img.shields.io/badge/Build%20size-1.98%20MB-blue)
+![Website build size](https://img.shields.io/badge/Build%20size-2.20%20MB-blue)
 
 
   <p align="center">
@@ -61,6 +61,7 @@ Website of the association Rv & Co promoting the productions and social networks
 
 - [VueJS 3](https://vuejs.org/)
 - [Sass](https://sass-lang.com/)
+- [Vue-router](https://router.vuejs.org/)
 - [Vue-i18n](https://vue-i18n.intlify.dev/)
 - [Fontawesome](https://fontawesome.com/)
 
