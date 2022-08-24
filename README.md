@@ -10,7 +10,7 @@
 
 ![Website version](https://img.shields.io/github/package-json/v/Minarox/Maintenance?label=Version)&nbsp;
 ![Project License](https://img.shields.io/github/license/Minarox/Maintenance?label=License)&nbsp;
-![Website build size](https://img.shields.io/badge/Build%20size-0.0%20MB-blue)
+![Website build size](https://img.shields.io/badge/Build%20size-1.98%20MB-blue)
 
 
   <p align="center">
