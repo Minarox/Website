@@ -5,8 +5,8 @@
       <h1>Minarox</h1>
     </section>
     <section>
-      <h2>Le site arrive bientôt !</h2>
-      <p>En attendant, suis-moi sur les réseaux sociaux !</p>
+      <h2>{{ $t("coming-soon") }}</h2>
+      <p>{{ $t("follow-me") }}</p>
     </section>
     <section>
       <a
