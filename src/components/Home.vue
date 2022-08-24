@@ -5,7 +5,7 @@
         src="@/assets/logo.svg"
         alt="Logo Minarox"
         width="140"
-        height="auto"
+        height="142"
       />
       <h1>Minarox</h1>
     </section>
