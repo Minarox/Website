@@ -1,13 +1,132 @@
-# Page de maintenance
-Page HTML de maintenance du site [Minarox.fr](https://minarox.fr).
+<div id="top"></div>
+<br />
 
-## Contenu
-* Logo et pseudo
-* Texte de maintenance
-* Liens vers les réseaux sociaux :
-  - [Youtube](https://youtube.com/channel/UCznR2syShlluEzWRoD7XZRQ)
-  - [Twitch](https://twitch.tv/minarox)
-  - [Twitter](https://twitter.com/Minarox_)
-  - [Discord](https://discord.com/invite/jEF8bDc)
-  - [Instagram](https://instagram.com/minarox_)
-  - [Soundcloud](https://soundcloud.com/minarox_fr)
+<div align="center">
+<a href="https://github.com/Minarox/Maintenance">
+    <img src="https://avatars.githubusercontent.com/u/71065703?v=4" alt="Logo Minarox" width="auto" height="80" style="border-radius: 4px">
+</a>
+
+<h3 align="center">Maintenance</h3>
+
+![Website version](https://img.shields.io/github/package-json/v/Minarox/Maintenance?label=Version)&nbsp;
+![Project License](https://img.shields.io/github/license/Minarox/Maintenance?label=License)&nbsp;
+![Website build size](https://img.shields.io/badge/Build%20size-1.98%20MB-blue)
+
+
+  <p align="center">
+    Maintenance page of the Minarox website.
+    <br />
+    <a href="https://minarox.fr/"><strong>minarox.fr »</strong></a>
+  </p>
+</div>
+<br />
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#color-reference">Color Reference</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#run-locally">Run Locally</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+      </ul>
+    </li>
+    <li><a href="#feedback">Feedback</a></li>
+    <li><a href="#author">Author</a></li>
+  </ol>
+</details>
+
+## About The Project
+
+Website of the association Rv & Co promoting the productions and social networks.
+
+### Features
+
+- Logo and name
+- Maintenance message with translation (EN and FR)
+- Other projects with carousel
+- Links to social networks
+- Responsive design
+
+### Tech Stack
+
+- [VueJS 3](https://vuejs.org/)
+- [Sass](https://sass-lang.com/)
+- [Vue-i18n](https://vue-i18n.intlify.dev/)
+- [Fontawesome](https://fontawesome.com/)
+
+### Color Reference
+
+| Color                        | Hex                                                                           | Description                   |
+|------------------------------|-------------------------------------------------------------------------------|-------------------------------|
+| Text color                   | ![#FFFFFFFF](https://via.placeholder.com/8/FFFFFFFF/FFFFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
+| Background color             | ![#393939FF](https://via.placeholder.com/8/393939FF/393939FF.png) `#393939FF` | Global background             |
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Getting Started
+
+### Prerequisites
+
+- Install [NodeJS](https://nodejs.org/) with [npm](https://www.npmjs.com/)
+
+```bash
+  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+```
+
+### Run locally
+
+1. Clone the project
+
+```bash
+  git clone https://github.com/Minarox/Maintenance
+  cd website
+```
+
+2. Install dependencies
+
+```bash
+  npm install
+```
+
+3. Start the server
+
+```bash
+  npm run serve
+```
+
+The server should start on [localhost:8080](http://localhost:8080/).
+
+### Deployment
+
+To deploy this project run
+
+```bash
+  npm run build
+```
+
+A new `dist` folder will appear containing the entire compiled website.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Feedback
+
+If you have any feedback, please reach out to us at [contact@minarox.fr](mailto:contact@minarox.fr).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Author
+
+[@Minarox](https://www.github.com/Minarox)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
