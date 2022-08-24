@@ -47,7 +47,7 @@
 
 ## About The Project
 
-Website of the association Rv & Co promoting the productions and social networks.
+Maintenance page of the Minarox website with links to the different social networks.
 
 ### Features
 
