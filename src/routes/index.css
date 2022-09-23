@@ -1,0 +1,53 @@
+main {
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+}
+
+main section:nth-child(1) img {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 140px;
+}
+
+main section:nth-child(1) h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+main section:nth-child(2) h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+main section:nth-child(2) p {
+    font-size: 1.3em;
+}
+
+main section:nth-child(3) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0 0.2rem;
+}
+
+main section:nth-child(3) a {
+    padding: 1rem;
+    font-size: 1.8em;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+    transform: scale(1.01);
+    transition: transform 220ms;
+}
+
+main section:nth-child(3) a:hover {
+    transform: scale(1.15);
+}
