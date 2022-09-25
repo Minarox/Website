@@ -1,3 +1,2 @@
-*
-  Cache-Control: max-age=31536000
-  Link: <https://www.minarox.fr>; rel="canonical"
+/build/*
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, immutable
