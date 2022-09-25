@@ -1,6 +1,13 @@
 import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import styles from './index.css?inline';
+import styles from './index.scss?inline';
+import {Youtube} from "~/components/icons/youtube";
+import {Twitch} from "~/components/icons/twitch";
+import {Twitter} from "~/components/icons/twitter";
+import {Discord} from "~/components/icons/discord";
+import {Instagram} from "~/components/icons/instagram";
+import {Github} from "~/components/icons/github";
+import {Logo} from "~/components/icons/logo";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -8,12 +15,7 @@ export default component$(() => {
   return (
     <main>
       <section>
-        <img
-            src="/public/logo.svg"
-            alt="Logo Minarox"
-            width="140"
-            height="142"
-        />
+        <Logo />
         <h1>Minarox</h1>
       </section>
       <section>
@@ -25,22 +27,22 @@ export default component$(() => {
             href="https://youtube.com/channel/UCznR2syShlluEzWRoD7XZRQ"
             title="YouTube"
         >
-          <font-awesome-icon icon="fa-brands fa-youtube" fixed-width />
+          <Youtube />
         </a>
         <a href="https://twitch.tv/minarox" title="Twitch">
-          <font-awesome-icon icon="fa-brands fa-twitch" fixed-width />
+          <Twitch />
         </a>
         <a href="https://twitter.com/Minarox_" title="Twitter">
-          <font-awesome-icon icon="fa-brands fa-twitter" fixed-width />
+          <Twitter />
         </a>
         <a href="https://discord.com/invite/jEF8bDc" title="Discord">
-          <font-awesome-icon icon="fa-brands fa-discord" fixed-width />
+          <Discord />
         </a>
         <a href="https://instagram.com/minarox_" title="Instagram">
-          <font-awesome-icon icon="fa-brands fa-instagram" fixed-width />
+          <Instagram />
         </a>
         <a href="https://github.com/Minarox" title="GitHub">
-          <font-awesome-icon icon="fa-brands fa-github" fixed-width />
+          <Github />
         </a>
       </section>
     </main>
