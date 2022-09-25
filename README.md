@@ -1,66 +1,129 @@
-# Qwik App ⚡️
+<div id="top"></div>
+<br />
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik Github](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+<div align="center">
+<a href="https://github.com/Minarox/Maintenance">
+    <img src="https://avatars.githubusercontent.com/u/71065703?v=4" alt="Logo Minarox" width="auto" height="80" style="border-radius: 4px">
+</a>
 
----
+<h3 align="center">Maintenance</h3>
 
-## Project Structure
+![Website version](https://img.shields.io/github/package-json/v/Minarox/Maintenance?label=Version)&nbsp;
+![Project License](https://img.shields.io/github/license/Minarox/Maintenance?label=License)&nbsp;
+![Website build size](https://img.shields.io/badge/Build%20size-2.20%20MB-blue)
 
-Inside of you project, you'll see the following directories and files:
 
+  <p align="center">
+    Maintenance page of the Minarox website.
+    <br />
+    <a href="https://minarox.fr/"><strong>minarox.fr »</strong></a>
+  </p>
+</div>
+<br />
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#color-reference">Color Reference</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#run-locally">Run Locally</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+      </ul>
+    </li>
+    <li><a href="#feedback">Feedback</a></li>
+    <li><a href="#author">Author</a></li>
+  </ol>
+</details>
+
+## About The Project
+
+Maintenance page of the Minarox website with links to the different social networks.
+
+### Features
+
+- Logo and name
+- Maintenance message
+- Links to social networks
+- Responsive design
+
+### Tech Stack
+
+- [Qwik](https://qwik.builder.io/)
+- [Sass](https://sass-lang.com/)
+
+### Color Reference
+
+| Color                        | Hex                                                                           | Description                   |
+|------------------------------|-------------------------------------------------------------------------------|-------------------------------|
+| Text color                   | ![#FFFFFFFF](https://via.placeholder.com/8/FFFFFFFF/FFFFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
+| Background color             | ![#051232FF](https://via.placeholder.com/8/051232FF/051232FF.png) `#051232FF` | Global background             |
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Getting Started
+
+### Prerequisites
+
+- Install [NodeJS](https://nodejs.org/) with [npm](https://www.npmjs.com/)
+
+```bash
+  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  sudo apt-get install -y nodejs
 ```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
+
+### Run locally
+
+1. Clone the project
+
+```bash
+  git clone https://github.com/Minarox/Maintenance
+  cd website
 ```
 
-- `src/routes`: Provides the directory based routing, which can include a hierarchy of `layout.tsx` layout files, and `index.tsx` files as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+2. Install dependencies
 
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
-
-## Add Integrations
-
-Use the `npm run qwik add` command to add other integrations. Some examples of integrations include as a Cloudflare, Netlify or Vercel server, and the Static Site Generator (SSG).
-
-```
-npm run qwik add
+```bash
+  npm install
 ```
 
-## Development
+3. Start the server
 
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules loaded by the browser.
-
-```
-npm run dev
+```bash
+  npm start
 ```
 
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
+The server should start on [localhost:5173](http://localhost:5173/).
 
-## Preview
+### Deployment
 
-The preview command will create a production build of the client modules, production build of `src/entry.preview.tsx`, and create a local server. The preview server is only for convenience to locally preview a production build, but it should not be used as a production server.
+To deploy this project run
 
+```bash
+  npm run build
 ```
-npm run preview
-```
 
-## Production
+A new `dist` folder will appear containing the entire compiled website.
 
-The production build should generate the client and server modules by running both client and server build commands. Additionally, the build command will use Typescript run a type check on the source.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-```
-npm run build
-```
+## Feedback
+
+If you have any feedback, please reach out to us at [contact@minarox.fr](mailto:contact@minarox.fr).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Author
+
+[@Minarox](https://www.github.com/Minarox)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
