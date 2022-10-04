@@ -12,7 +12,6 @@
 ![Project License](https://img.shields.io/github/license/Minarox/Maintenance?label=License)&nbsp;
 ![Website build size](https://img.shields.io/badge/Build%20size-2.20%20MB-blue)
 
-
   <p align="center">
     Maintenance page of the Minarox website.
     <br />
@@ -67,10 +66,10 @@ Maintenance page of the Minarox website with links to the different social netwo
 
 ### Color Reference
 
-| Color                        | Hex                                                                           | Description                   |
-|------------------------------|-------------------------------------------------------------------------------|-------------------------------|
-| Text color                   | ![#FFFFFFFF](https://via.placeholder.com/8/FFFFFFFF/FFFFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
-| Background color             | ![#393939FF](https://via.placeholder.com/8/393939FF/393939FF.png) `#393939FF` | Global background             |
+| Color            | Hex                                                                           | Description          |
+| ---------------- | ----------------------------------------------------------------------------- | -------------------- |
+| Text color       | ![#FFFFFFFF](https://via.placeholder.com/8/FFFFFFFF/FFFFFFFF.png) `#FFFFFFFF` | Titles and subtitles |
+| Background color | ![#393939FF](https://via.placeholder.com/8/393939FF/393939FF.png) `#393939FF` | Global background    |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
