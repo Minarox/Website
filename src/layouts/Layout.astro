@@ -1,4 +1,6 @@
 ---
+import { SEO } from "astro-seo";
+
 const ackee = {
 	server: import.meta.env.ACKEE_SERVER,
 	domainId: import.meta.env.ACKEE_ID,
@@ -10,14 +12,62 @@ const ackee = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<SEO
+      title="Minarox.fr"
+      description="Créateur de contenu depuis trop longtemps.",
+			charset="UTF-8"
+      openGraph={{
+        basic: {
+          title: "Minarox.fr",
+          type: "website",
+          url: Astro.url.origin,
+          image: "/favicon/banner.webp"
+        },
+				optional: {
+					locale: "fr_FR",
+				},
+				image: {
+					alt: "Minarox.fr banner",
+					url: "/favicon/banner.webp",
+					type: "image/webp"
+				}
+      }}
+      twitter={{
+        creator: "@Minarox_",
+				card: "summary_large_image",
+				site: Astro.url.origin,
+				title: "Minarox.fr",
+				description: "Créateur de contenu depuis trop longtemps.",
+				image: "/favicon/banner.webp",
+				imageAlt: "Minarox.fr banner",
+      }}
+      extend={{
+        link: [
+					{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:no-preference)" },
+					{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:dark)" },
+					{ rel: "icon", href: "/favicon/favicon-dark.ico", media: "(prefers-color-scheme:light)" },
+					{ rel: "icon", href: "/favicon/android-chrome-192x192.png", sizes: "192x192" },
+					{ rel: "icon", href: "/favicon/android-chrome-512x512.png", sizes: "512x512" },
+					{ rel: "apple-touch-icon", href: "/favicon/apple-touch-icon.png", sizes: "180x180" },
+					{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon/favicon-32x32.png" },
+					{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon/favicon-16x16.png" },
+					{ rel: "mainfest", href: "/favicon/site.webmanifest" },
+					{ rel: "sitemap", href: "/sitemap-index.xml" },
+				],
+        meta: [
+					{ name: "viewport", content: "width=device-width,initial-scale=1.0" },
+					{ name: "theme-color", content: "#06163a" },
+					{ name: "keywords", content: "Vidéos, Stream, Live, Youtube, Twitch, Best-of, compilations, montage, projets, maintenance, site web" },
+					{ name: "robots", content: "index, follow" },
+					{ name: "language", content: "French" },
+					{ name: "author", content: "Minarox" },
+					{ name: "generator", content: Astro.generator }
+        ],
+      }}
+    />
 	</head>
 	<body>
 		<slot />
