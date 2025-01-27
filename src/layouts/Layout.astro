@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { AstroFont } from "astro-font";
 
 const ackee = {
 	server: import.meta.env.ACKEE_SERVER,
@@ -67,6 +68,29 @@ const ackee = {
 					{ name: "generator", content: Astro.generator }
         ],
       }}
+    />
+		<AstroFont
+      config={[
+        {
+          name: "Lato",
+          src: [
+            {
+              style: "normal",
+              weight: 400,
+              path: "./public/font/Lato-Regular.ttf"
+            },
+            {
+              style: "bold",
+              weight: 700,
+              path: "./public/font/Lato-Bold.ttf"
+            },
+          ],
+          preload: true,
+          display: "swap",
+          selector: "body",
+          fallback: "sans-serif",
+        },
+      ]}
     />
 	</head>
 	<body>
