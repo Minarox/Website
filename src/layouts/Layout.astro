@@ -1,3 +1,14 @@
+---
+const ackee = {
+	server: import.meta.env.ACKEE_SERVER,
+	domainId: import.meta.env.ACKEE_ID,
+	opts: {
+		detailed: true,
+		ignoreOwnVisits: false
+	}
+};
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -10,6 +21,7 @@
 	</head>
 	<body>
 		<slot />
+		<script type="text/partytown" src={`${ackee.server}/analytics.js`} data-ackee-server={ackee.server} data-ackee-domain-id={ackee.domainId} data-ackee-opts={JSON.stringify(ackee.opts)}></script>
 	</body>
 </html>
 
