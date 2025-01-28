@@ -31,7 +31,7 @@ jobs:
         run: bun install --frozen-lockfile
       - name: Build website
         env:
-          ACKEE_ID: ${{ secrets.ACKEE_ID }}
+          ACKEE_DOMAIN_ID: ${{ secrets.ACKEE_DOMAIN_ID }}
           ACKEE_SERVER: ${{ secrets.ACKEE_SERVER }}
         run: bun run build
       - name: Set up Pages

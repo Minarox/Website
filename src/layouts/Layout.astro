@@ -4,152 +4,155 @@ import { AstroFont } from "astro-font";
 
 const ackee = {
 	server: import.meta.env.ACKEE_SERVER,
-	domainId: import.meta.env.ACKEE_ID,
+	domainId: import.meta.env.ACKEE_DOMAIN_ID,
 	opts: {
 		detailed: true,
 		ignoreOwnVisits: false
 	}
 };
+const ackeeScript = ackee.server && ackee.domainId && `
+	<script type="text/partytown" src="${ackee.server}/analytics.js" data-ackee-server="${ackee.server}" data-ackee-domain-id="${ackee.domainId}" data-ackee-opts='${JSON.stringify(ackee.opts)}'></script>
+` || '';
 ---
 
 <!doctype html>
 <html lang="fr">
-	<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<SEO
-      title="Minarox.fr"
-      description="Créateur de contenu depuis trop longtemps.",
-			charset="UTF-8"
-      openGraph={{
-        basic: {
-          title: "Minarox.fr",
-          type: "website",
-          url: Astro.url.origin,
-          image: "/favicon/banner.webp"
-        },
-				optional: {
-					locale: "fr_FR",
-				},
-				image: {
-					alt: "Minarox.fr banner",
-					url: "/favicon/banner.webp",
-					type: "image/webp"
-				}
-      }}
-      twitter={{
-        creator: "@Minarox_",
-				card: "summary_large_image",
-				site: Astro.url.origin,
-				title: "Minarox.fr",
-				description: "Créateur de contenu depuis trop longtemps.",
-				image: "/favicon/banner.webp",
-				imageAlt: "Minarox.fr banner",
-      }}
-      extend={{
-        link: [
-					{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:no-preference)" },
-					{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:dark)" },
-					{ rel: "icon", href: "/favicon/favicon-dark.ico", media: "(prefers-color-scheme:light)" },
-					{ rel: "icon", href: "/favicon/android-chrome-192x192.png", sizes: "192x192" },
-					{ rel: "icon", href: "/favicon/android-chrome-512x512.png", sizes: "512x512" },
-					{ rel: "apple-touch-icon", href: "/favicon/apple-touch-icon.png", sizes: "180x180" },
-					{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon/favicon-32x32.png" },
-					{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon/favicon-16x16.png" },
-					{ rel: "mainfest", href: "/favicon/site.webmanifest" },
-					{ rel: "sitemap", href: "/sitemap-index.xml" },
-				],
-        meta: [
-					{ name: "viewport", content: "width=device-width,initial-scale=1.0" },
-					{ name: "theme-color", content: "#06163a" },
-					{ name: "keywords", content: "Vidéos, Stream, Live, Youtube, Twitch, Best-of, compilations, montage, projets, maintenance, site web" },
-					{ name: "robots", content: "index, follow" },
-					{ name: "language", content: "French" },
-					{ name: "author", content: "Minarox" },
-					{ name: "generator", content: Astro.generator }
-        ],
-      }}
-    />
-		<AstroFont
-      config={[
-        {
-          name: "Lato",
-          src: [
-            {
-              style: "normal",
-              weight: 400,
-              path: "./public/font/Lato-Regular.ttf"
-            },
-            {
-              style: "bold",
-              weight: 700,
-              path: "./public/font/Lato-Bold.ttf"
-            },
-          ],
-          preload: true,
-          display: "swap",
-          selector: "body",
-          fallback: "sans-serif",
-        },
-      ]}
-    />
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<SEO
+	title="Minarox.fr"
+	description="Créateur de contenu depuis trop longtemps.",
+	charset="UTF-8"
+	openGraph={{
+		basic: {
+			title: "Minarox.fr",
+			type: "website",
+			url: Astro.url.origin,
+			image: "/favicon/banner.webp"
+		},
+		optional: {
+			locale: "fr_FR",
+		},
+		image: {
+			alt: "Minarox.fr banner",
+			url: "/favicon/banner.webp",
+			type: "image/webp"
+		}
+	}}
+	twitter={{
+		creator: "@Minarox_",
+		card: "summary_large_image",
+		site: Astro.url.origin,
+		title: "Minarox.fr",
+		description: "Créateur de contenu depuis trop longtemps.",
+		image: "/favicon/banner.webp",
+		imageAlt: "Minarox.fr banner",
+	}}
+	extend={{
+		link: [
+		{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:no-preference)" },
+		{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:dark)" },
+		{ rel: "icon", href: "/favicon/favicon-dark.ico", media: "(prefers-color-scheme:light)" },
+		{ rel: "icon", href: "/favicon/android-chrome-192x192.png", sizes: "192x192" },
+		{ rel: "icon", href: "/favicon/android-chrome-512x512.png", sizes: "512x512" },
+		{ rel: "apple-touch-icon", href: "/favicon/apple-touch-icon.png", sizes: "180x180" },
+		{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon/favicon-32x32.png" },
+		{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon/favicon-16x16.png" },
+		{ rel: "mainfest", href: "/favicon/site.webmanifest" },
+		{ rel: "sitemap", href: "/sitemap-index.xml" },
+		],
+		meta: [
+		{ name: "viewport", content: "width=device-width,initial-scale=1.0" },
+		{ name: "theme-color", content: "#06163a" },
+		{ name: "keywords", content: "Vidéos, Stream, Live, Youtube, Twitch, Best-of, compilations, montage, projets, maintenance, site web" },
+		{ name: "robots", content: "index, follow" },
+		{ name: "language", content: "French" },
+		{ name: "author", content: "Minarox" },
+		{ name: "generator", content: Astro.generator }
+		],
+	}}
+	/>
+	<AstroFont
+	config={[
+		{
+			name: "Lato",
+			src: [
+			{
+				style: "normal",
+				weight: 400,
+				path: "./public/font/Lato-Regular.ttf"
+			},
+			{
+				style: "bold",
+				weight: 700,
+				path: "./public/font/Lato-Bold.ttf"
+			},
+			],
+			preload: true,
+			display: "swap",
+			selector: "body",
+			fallback: "sans-serif",
+		},
+		]}
+		/>
 	</head>
 	<body>
 		<slot />
-		<script type="text/partytown" src={`${ackee.server}/analytics.js`} data-ackee-server={ackee.server} data-ackee-domain-id={ackee.domainId} data-ackee-opts={JSON.stringify(ackee.opts)}></script>
+		<Fragment set:html={ackeeScript} />
 	</body>
-</html>
+	</html>
 
-<style lang="scss">
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	::-webkit-scrollbar {
-		width: 14px;
-	}
-
-	::-webkit-scrollbar-thumb {
-		box-shadow: inset 0 0 14px 14px white;
-		border: solid 4px transparent;
-		border-radius: 14px;
-	}
-
-	::-webkit-scrollbar-button {
-		display: none;
-	}
-
-	body {
-		position: relative;
-		width: 100vw;
-		height: 100vh;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-o-user-select: none;
-		user-select: none;
-		scroll-behavior: smooth;
-		overflow: overlay;
-		font-family: "Lato", "Helvetica", "Arial", sans-serif;
-		font-weight: 400;
-		color: white;
-		text-align: center;
-		text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-		background-image: url("../assets/background.svg");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-
-		img {
-			-webkit-user-drag: none;
-			-khtml-user-drag: none;
-			-moz-user-drag: none;
-			-o-user-drag: none;
-			user-drag: none;
+	<style lang="scss">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
 		}
-	}
-</style>
+
+		::-webkit-scrollbar {
+			width: 14px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			box-shadow: inset 0 0 14px 14px white;
+			border: solid 4px transparent;
+			border-radius: 14px;
+		}
+
+		::-webkit-scrollbar-button {
+			display: none;
+		}
+
+		body {
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+			scroll-behavior: smooth;
+			overflow: overlay;
+			font-family: "Lato", "Helvetica", "Arial", sans-serif;
+			font-weight: 400;
+			color: white;
+			text-align: center;
+			text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+			background-image: url("../assets/background.svg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+
+			img {
+				-webkit-user-drag: none;
+				-khtml-user-drag: none;
+				-moz-user-drag: none;
+				-o-user-drag: none;
+				user-drag: none;
+			}
+		}
+	</style>
