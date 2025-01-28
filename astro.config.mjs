@@ -3,10 +3,11 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import metaTags from 'astro-meta-tags';
+import icon from 'astro-icon';
 import compressor from 'astro-compressor';
 
 // https://astro.build/config
 export default defineConfig({
     site: 'https://minarox.fr',
-    integrations: [sitemap(), partytown(), metaTags(), compressor()]
+    integrations: [sitemap(), partytown(), metaTags(), icon(), compressor()]
 });
