@@ -1,48 +1,117 @@
-# Astro Starter Kit: Basics
+<div id="top"></div>
+<br />
 
-```sh
-npm create astro@latest -- --template basics
+<div align="center">
+<a href="https://github.com/Minarox/Website">
+    <img src="https://avatars.githubusercontent.com/u/71065703?v=4" alt="Logo Minarox" width="auto" height="80" style="border-radius: 4px">
+</a>
+
+<h3 align="center">Website</h3>
+
+![Website version](https://img.shields.io/github/package-json/v/Minarox/Website?label=Version)&nbsp;
+![Project License](https://img.shields.io/github/license/Minarox/Website?label=License)
+
+  <p align="center">
+    Minarox website.
+    <br />
+    <a href="https://minarox.fr/"><strong>minarox.fr »</strong></a>
+  </p>
+</div>
+<br />
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#color-reference">Color Reference</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#run-locally">Run Locally</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+      </ul>
+    </li>
+    <li><a href="#feedback">Feedback</a></li>
+    <li><a href="#author">Author</a></li>
+  </ol>
+</details>
+
+## About The Project
+
+Minarox website with links to the different social networks.
+
+### Features
+
+- Logo and name
+- Maintenance message
+- Links to social networks
+- Responsive design
+
+### Tech Stack
+
+- [Bun](https://bun.sh/)
+- [Astro](https://astro.build/)
+
+### Color Reference
+
+| Color                        | Hex                                                                           | Description                   |
+|------------------------------|-------------------------------------------------------------------------------|-------------------------------|
+| Text color                   | ![#FFFFFFFF](https://via.placeholder.com/8/FFFFFFFF/FFFFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
+| Background color             | ![#393939FF](https://via.placeholder.com/8/393939FF/393939FF.png) `#393939FF` | Global background             |
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Getting Started
+
+### Run locally
+
+1. Clone the project
+
+```bash
+  git clone https://github.com/Minarox/Website
+  cd Website
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. Install dependencies
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+  bun install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+3. Start the server
 
-## 🧞 Commands
+```bash
+  bun run dev
+```
 
-All commands are run from the root of the project, from a terminal:
+The server should start on [localhost:4321](http://localhost:4321/).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Deployment
 
-## 👀 Want to learn more?
+To build this project, run :
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+  bun run build
+```
+
+A new `dist` folder will appear containing the entire compiled website.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Feedback
+
+If you have any feedback, please reach out to us at [contact@minarox.fr](mailto:contact@minarox.fr).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Author
+
+[@Minarox](https://www.github.com/Minarox)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
