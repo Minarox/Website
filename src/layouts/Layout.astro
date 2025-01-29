@@ -3,8 +3,8 @@ import { SEO } from "astro-seo";
 import { AstroFont } from "astro-font";
 
 const ackee = {
-	server: import.meta.env.ACKEE_SERVER,
-	domainId: import.meta.env.ACKEE_DOMAIN_ID,
+	server: import.meta.env.ACKEE_SERVER?.trim(),
+	domainId: import.meta.env.ACKEE_DOMAIN_ID?.trim(),
 	opts: {
 		detailed: true,
 		ignoreOwnVisits: false
