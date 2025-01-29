@@ -7,7 +7,7 @@
       }
    },
    "remoteUser": "bun",
-   "postStartCommand": "bun install && bun run dev",
+   "postStartCommand": "bun install",
    "customizations": {
       "vscode": {
          "extensions": [
