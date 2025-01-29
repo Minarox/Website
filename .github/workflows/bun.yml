@@ -1,10 +1,7 @@
 name: Building website
 
 on:
-    push:
-        branches: [ "main" ]
-    pull_request:
-        types: [ opened, reopened ]
+    pull_request
 
 jobs:
     build:
