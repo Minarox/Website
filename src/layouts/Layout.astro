@@ -1,18 +1,6 @@
 ---
 import { SEO } from "astro-seo";
 import { AstroFont } from "astro-font";
-
-const ackee = {
-	server: import.meta.env.ACKEE_SERVER?.trim(),
-	domainId: import.meta.env.ACKEE_DOMAIN_ID?.trim(),
-	opts: {
-		detailed: true,
-		ignoreOwnVisits: false
-	}
-};
-const ackeeScript = ackee.server && ackee.domainId && `
-	<script type="text/partytown" src="${ackee.server}/analytics.js" data-ackee-server="${ackee.server}" data-ackee-domain-id="${ackee.domainId}" data-ackee-opts='${JSON.stringify(ackee.opts)}'></script>
-` || '';
 ---
 
 <!doctype html>
@@ -98,7 +86,6 @@ const ackeeScript = ackee.server && ackee.domainId && `
 	</head>
 	<body>
 		<slot />
-		<Fragment set:html={ackeeScript} />
 	</body>
 	</html>
 
