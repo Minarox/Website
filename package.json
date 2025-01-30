@@ -12,12 +12,14 @@
     },
     "homepage": "https://github.com/Minarox/Website#readme",
     "readme": "./README.md",
+    "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/Minarox/Website.git"
     },
     "type": "module",
-    "version": "0.0.1",
+    "private": true,
+    "version": "1.0.0",
     "scripts": {
         "dev": "astro dev",
         "build": "astro build",
@@ -27,7 +29,7 @@
     "dependencies": {
         "@astrojs/partytown": "^2.1.3",
         "@astrojs/sitemap": "^3.2.1",
-        "astro": "^5.1.9",
+        "astro": "^5.2.0",
         "astro-compressor": "^1.0.0",
         "astro-font": "^1.0.0",
         "astro-icon": "^1.1.5",
