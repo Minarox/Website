@@ -1,20 +1,24 @@
 {
-   "name": "Bun",
-   "build": {
-      "dockerfile": "Dockerfile",
-      "args": {
-         "VERSION": "latest"
-      }
+   "name": "Website",
+   "dockerFile": "dockerfile",
+   "features": {
+      "ghcr.io/devcontainers/features/git-lfs:1": {}
    },
    "remoteUser": "bun",
-   "postStartCommand": "bun install",
+   "runArgs": [
+      "--name",
+      "website_devcontainer"
+   ],
+   "postStartCommand": "bun install --frozen-lockfile",
    "customizations": {
       "vscode": {
          "extensions": [
+            "oven.bun-vscode",
             "astro-build.astro-vscode",
             "github.vscode-github-actions",
             "ecmel.vscode-html-css",
-            "vivaxy.vscode-conventional-commits"
+            "vivaxy.vscode-conventional-commits",
+            "dbaeumer.vscode-eslint"
          ]
       }
    }
