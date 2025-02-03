@@ -3,7 +3,7 @@
   "configurations": [
      {
         "type": "node-terminal",
-        "name": "Run Script: dev",
+        "name": "Dev server",
         "request": "launch",
         "command": "bun run dev",
         "cwd": "${workspaceFolder}"
