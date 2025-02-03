@@ -9,7 +9,8 @@
 <h3 align="center">Website</h3>
 
 ![Website version](https://img.shields.io/github/package-json/v/Minarox/Website?label=Version)&nbsp;
-![Project License](https://img.shields.io/github/license/Minarox/Website?label=License)
+![Project License](https://img.shields.io/github/license/Minarox/Website?label=License)&nbsp;
+![Code size](https://img.shields.io/github/languages/code-size/Minarox/Website?style=flat&label=Code%20size)
 
   <p align="center">
     Minarox website.
@@ -62,8 +63,8 @@ Minarox website with links to the different social networks.
 
 | Color                        | Hex                                                                           | Description                   |
 |------------------------------|-------------------------------------------------------------------------------|-------------------------------|
-| Text color                   | ![#FFFFFFFF](https://via.placeholder.com/8/FFFFFFFF/FFFFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
-| Background color             | ![#393939FF](https://via.placeholder.com/8/393939FF/393939FF.png) `#393939FF` | Global background             |
+| Text color                   | <img valign='middle' alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> `#FFFFFF` | Titles and subtitles          |
+| Background color             | <img valign='middle' alt='blue' src='https://readme-swatches.vercel.app/393939?style=round'/> `#393939` | Global background             |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
