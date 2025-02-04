@@ -3,6 +3,30 @@ import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Logo from '@assets/logo.svg';
 import Links from '@components/Links.astro';
+
+const social = [
+	{
+		name: "YouTube",
+		url: "https://youtube.com/@Minarox",
+	},
+	{
+		name: "Twitch",
+		url: "https://twitch.tv/minarox",
+	},
+	{
+		name: "X",
+		url: "https://x.com/Minarox_",
+		icon: "twitter"
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com/minarox_",
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com/Minarox",
+	}
+]
 ---
 
 <Layout>
@@ -13,7 +37,7 @@ import Links from '@components/Links.astro';
 		</header>
 
 		<article>
-			<Links />
+			<Links social={social} />
 		</article>
 	</main>
 </Layout>

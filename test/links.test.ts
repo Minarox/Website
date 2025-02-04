@@ -2,18 +2,41 @@ import { test, expect } from 'vitest';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import Links from '../src/components/Links.astro';
 
+const social = [
+	{
+		name: "YouTube",
+		url: "https://youtube.com/@Minarox",
+	},
+	{
+		name: "Twitch",
+		url: "https://twitch.tv/minarox",
+	},
+	{
+		name: "X",
+		url: "https://x.com/Minarox_",
+		icon: "twitter"
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com/minarox_",
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com/Minarox",
+	}
+]
+
 test('Array of links', async () => {
 	const container = await AstroContainer.create();
-	const component = await container.renderToString(Links);
+	const component = await container.renderToString(Links, {
+		props: {
+			social: social
+		}
+	});
 
-	expect(component.toString()).toContain('YouTube');
-	expect(component.toString()).toContain('data-icon="youtube"');
-	expect(component.toString()).toContain('Twitch');
-	expect(component.toString()).toContain('data-icon="twitch"');
-	expect(component.toString()).toContain('X');
-	expect(component.toString()).toContain('data-icon="twitter"');
-	expect(component.toString()).toContain('Instagram');
-	expect(component.toString()).toContain('data-icon="instagram"');
-	expect(component.toString()).toContain('GitHub');
-	expect(component.toString()).toContain('data-icon="github"');
+	for (const link of social) {
+		expect(component).toContain(link.name);
+		expect(component).toContain(link.url);
+		expect(component).toContain(`data-icon="${link.icon || link.name.toLowerCase()}"`);
+	}
 })
