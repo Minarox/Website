@@ -1,24 +1,25 @@
 {
    "name": "Website",
-   "dockerFile": "dockerfile",
+   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
    "features": {
       "ghcr.io/devcontainers/features/git-lfs:1": {}
    },
-   "remoteUser": "bun",
+   "remoteUser": "node",
    "runArgs": [
       "--name",
       "website_devcontainer"
    ],
-   "postStartCommand": "bun install --frozen-lockfile",
+   "postStartCommand": "npm install",
+   "forwardPorts": [4321],
    "customizations": {
       "vscode": {
          "extensions": [
-            "oven.bun-vscode",
             "astro-build.astro-vscode",
             "github.vscode-github-actions",
             "ecmel.vscode-html-css",
             "vivaxy.vscode-conventional-commits",
-            "dbaeumer.vscode-eslint"
+            "dbaeumer.vscode-eslint",
+            "vitest.explorer"
          ]
       }
    }
