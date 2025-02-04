@@ -1,0 +1,63 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const social = [
+	{
+		name: "YouTube",
+		url: "https://youtube.com/@Minarox",
+		icon: "youtube"
+	},
+	{
+		name: "Twitch",
+		url: "https://twitch.tv/minarox",
+		icon: "twitch"
+	},
+	{
+		name: "X",
+		url: "https://x.com/Minarox_",
+		icon: "twitter"
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com/minarox_",
+		icon: "instagram"
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com/Minarox",
+		icon: "github"
+	}
+]
+---
+
+<section>
+	{social.map((item) => (
+		<a href={item.url} title={item.name} aria-label={item.name}>
+			<Icon name={item?.icon || item.name.toLowerCase()} />
+		</a>
+	))}
+</section>
+
+<style lang="scss">
+	section {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 0 0.2rem;
+
+		a {
+			padding: 1rem;
+			font-size: 1.8em;
+			color: white;
+			text-decoration: none;
+			filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+			transform: scale(1.01);
+			transition: transform 220ms;
+
+			&:hover {
+				transform: scale(1.15);
+			}
+		}
+	}
+</style>
