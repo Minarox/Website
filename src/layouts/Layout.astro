@@ -3,6 +3,9 @@ import { SEO } from "astro-seo";
 import { AstroFont } from "astro-font";
 import Logo from '@assets/logo.svg';
 import Banner from '@assets/banner.webp';
+import Background from '@assets/background.svg';
+
+const background: string = `url(${Background.src})`;
 ---
 
 <!doctype html>
@@ -82,7 +85,7 @@ import Banner from '@assets/banner.webp';
 	</body>
 	</html>
 
-	<style lang="scss">
+	<style lang="scss" define:vars={{ background }}>
 		* {
 			margin: 0;
 			padding: 0;
@@ -121,7 +124,7 @@ import Banner from '@assets/banner.webp';
 			color: white;
 			text-align: center;
 			text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-			background-image: url("../assets/background.svg");
+			background-image: var(--background);
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
