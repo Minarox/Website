@@ -56,7 +56,6 @@ Minarox website with links to the different social networks.
 
 ### Tech Stack
 
-- [Bun](https://bun.sh/)
 - [Astro](https://astro.build/)
 
 ### Color Reference
@@ -82,13 +81,13 @@ Minarox website with links to the different social networks.
 2. Install dependencies
 
 ```bash
-  bun install
+  npm install
 ```
 
 3. Start the server
 
 ```bash
-  bun run dev
+  npm run dev
 ```
 
 The server should start on [localhost:4321](http://localhost:4321/).
@@ -98,7 +97,8 @@ The server should start on [localhost:4321](http://localhost:4321/).
 To build this project, run :
 
 ```bash
-  bun run build
+  npm run check
+  npm run build
 ```
 
 A new `dist` folder will appear containing the entire compiled website.
@@ -108,8 +108,6 @@ A new `dist` folder will appear containing the entire compiled website.
 ## Feedback
 
 If you have any feedback, please reach out to us at [contact@minarox.fr](mailto:contact@minarox.fr).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Author
 
