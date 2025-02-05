@@ -1,6 +1,11 @@
 ---
 import { SEO } from "astro-seo";
 import { AstroFont } from "astro-font";
+import Logo from '@assets/logo.svg';
+import Banner from '@assets/banner.webp';
+import Background from '@assets/background.svg';
+
+const background: string = `url(${Background.src})`;
 ---
 
 <!doctype html>
@@ -16,14 +21,14 @@ import { AstroFont } from "astro-font";
 			title: "Minarox.fr",
 			type: "website",
 			url: Astro.url.origin,
-			image: "/favicon/banner.webp"
+			image: Banner.src
 		},
 		optional: {
 			locale: "fr_FR",
 		},
 		image: {
 			alt: "Minarox.fr banner",
-			url: "/favicon/banner.webp",
+			url: Banner.src,
 			type: "image/webp"
 		}
 	}}
@@ -33,30 +38,21 @@ import { AstroFont } from "astro-font";
 		site: Astro.url.origin,
 		title: "Minarox.fr",
 		description: "Créateur de contenu depuis trop longtemps.",
-		image: "/favicon/banner.webp",
+		image: Banner.src,
 		imageAlt: "Minarox.fr banner",
 	}}
 	extend={{
 		link: [
-		{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:no-preference)" },
-		{ rel: "icon", href: "/favicon/favicon-light.ico", media: "(prefers-color-scheme:dark)" },
-		{ rel: "icon", href: "/favicon/favicon-dark.ico", media: "(prefers-color-scheme:light)" },
-		{ rel: "icon", href: "/favicon/android-chrome-192x192.png", sizes: "192x192" },
-		{ rel: "icon", href: "/favicon/android-chrome-512x512.png", sizes: "512x512" },
-		{ rel: "apple-touch-icon", href: "/favicon/apple-touch-icon.png", sizes: "180x180" },
-		{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon/favicon-32x32.png" },
-		{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon/favicon-16x16.png" },
-		{ rel: "mainfest", href: "/favicon/site.webmanifest" },
+		{ rel: "icon", type: "image/svg+xml", href: Logo.src },
 		{ rel: "sitemap", href: "/sitemap-index.xml" },
 		],
 		meta: [
 		{ name: "viewport", content: "width=device-width,initial-scale=1.0" },
-		{ name: "theme-color", content: "#06163a" },
+		{ name: "theme-color", content: "#040e29" },
 		{ name: "keywords", content: "Vidéos, Stream, Live, Youtube, Twitch, Best-of, compilations, montage, projets, maintenance, site web" },
 		{ name: "robots", content: "index, follow" },
 		{ name: "language", content: "French" },
-		{ name: "author", content: "Minarox" },
-		{ name: "generator", content: Astro.generator }
+		{ name: "author", content: "Minarox" }
 		],
 	}}
 	/>
@@ -89,7 +85,7 @@ import { AstroFont } from "astro-font";
 	</body>
 	</html>
 
-	<style lang="scss">
+	<style lang="scss" define:vars={{ background }}>
 		* {
 			margin: 0;
 			padding: 0;
@@ -128,7 +124,7 @@ import { AstroFont } from "astro-font";
 			color: white;
 			text-align: center;
 			text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-			background-image: url("../assets/background.svg");
+			background-image: var(--background);
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;

@@ -1,98 +1,72 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
+import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import Logo from '../assets/logo.svg';
+import Logo from '@assets/logo.svg';
+import Links, { type Props } from '@components/Links.astro';
+
+const social: Props['social'] = [
+	{
+		name: "YouTube",
+		url: "https://youtube.com/@Minarox",
+	},
+	{
+		name: "Twitch",
+		url: "https://twitch.tv/minarox",
+	},
+	{
+		name: "X",
+		url: "https://x.com/Minarox_",
+		icon: "fa6-brands:x-twitter"
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com/minarox_",
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com/Minarox",
+	},
+	{
+		name: "Email",
+		url: "mailto:contact@minarox.fr",
+		icon: "mdi:envelope"
+	}
+]
 ---
 
 <Layout>
 	<main>
-		<section>
-			<Image src={Logo} alt="Logo Minarox" width="140" height="142" />
+		<header>
+			<Image src={Logo} alt="Logo Minarox" width="140"/>
 			<h1>Minarox</h1>
-		</section>
+		</header>
 
-		<section>
-			<h2>Le site web arrive bientôt...</h2>
-			<p>En attendant, suis moi sur les réseaux sociaux !</p>
-		</section>
-
-		<section>
-			<a href="https://youtube.com/@Minarox" title="YouTube" aria-label="YouTube">
-				<Icon name="youtube" />
-			</a>
-			<a href="https://twitch.tv/minarox" title="Twitch" aria-label="Twitch">
-				<Icon name="twitch" />
-			</a>
-			<a href="https://x.com/Minarox_" title="X" aria-label="X">
-				<Icon name="twitter" />
-			</a>
-			<a href="https://instagram.com/minarox_" title="Instagram" aria-label="Instagram">
-				<Icon name="instagram" />
-			</a>
-			<a href="https://github.com/Minarox" title="GitHub" aria-label="GitHub">
-				<Icon name="github" />
-			</a>
-		</section>
+		<article>
+			<Links social={social} />
+		</article>
 	</main>
 </Layout>
 
 <style lang="scss">
 	main {
-		padding: 1rem;
-		width: calc(100% - 2rem);
-		height: calc(100% - 2rem);
+		width: 100vw;
+		height: 100vh;
 		display: grid;
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: 0.6fr 1fr;
 		align-items: center;
 		justify-items: center;
-		gap: 3rem;
 
-		section:nth-child(1) {
+		header {
+			padding: 1rem;
+
 			img {
 				padding: 0.5rem;
-				width: 100%;
-				max-width: 140px;
 			}
 
 			h1 {
-				margin: 0.8rem 0 0;
+				margin: 0;
 				font-size: 2em;
 				font-weight: 700;
-			}
-		}
-
-		section:nth-child(2) {
-			h2 {
-				font-size: 1.8em;
-				font-weight: 700;
-				margin-bottom: 0.4rem;
-			}
-
-			p {
-				font-size: 1.3em;
-			}
-		}
-
-		section:nth-child(3) {
-			display: flex;
-			flex-flow: row wrap;
-			align-items: center;
-			justify-content: center;
-			gap: 0 0.2rem;
-
-			a {
-				padding: 1rem;
-				font-size: 1.8em;
-				color: white;
-				text-decoration: none;
-				filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
-				transform: scale(1.01);
-				transition: transform 220ms;
-
-				&:hover {
-					transform: scale(1.15);
-				}
 			}
 		}
 	}

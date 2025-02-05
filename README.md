@@ -9,7 +9,8 @@
 <h3 align="center">Website</h3>
 
 ![Website version](https://img.shields.io/github/package-json/v/Minarox/Website?label=Version)&nbsp;
-![Project License](https://img.shields.io/github/license/Minarox/Website?label=License)
+![Project License](https://img.shields.io/github/license/Minarox/Website?label=License)&nbsp;
+![Code size](https://img.shields.io/github/languages/code-size/Minarox/Website?style=flat&label=Code%20size)
 
   <p align="center">
     Minarox website.
@@ -34,6 +35,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#run-locally">Run Locally</a></li>
+        <li><a href="#deployment">Tests</a></li>
         <li><a href="#deployment">Deployment</a></li>
       </ul>
     </li>
@@ -55,15 +57,14 @@ Minarox website with links to the different social networks.
 
 ### Tech Stack
 
-- [Bun](https://bun.sh/)
 - [Astro](https://astro.build/)
 
 ### Color Reference
 
 | Color                        | Hex                                                                           | Description                   |
 |------------------------------|-------------------------------------------------------------------------------|-------------------------------|
-| Text color                   | ![#FFFFFFFF](https://via.placeholder.com/8/FFFFFFFF/FFFFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
-| Background color             | ![#393939FF](https://via.placeholder.com/8/393939FF/393939FF.png) `#393939FF` | Global background             |
+| Text color                   | <img valign='middle' alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> `#FFFFFF` | Titles and subtitles          |
+| Background color             | <img valign='middle' alt='blue' src='https://readme-swatches.vercel.app/040e29?style=round'/> `#040e29` | Global background             |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -81,23 +82,32 @@ Minarox website with links to the different social networks.
 2. Install dependencies
 
 ```bash
-  bun install
+  npm install
 ```
 
 3. Start the server
 
 ```bash
-  bun run dev
+  npm run dev
 ```
 
 The server should start on [localhost:4321](http://localhost:4321/).
+
+### Tests
+
+To execute tests, run :
+
+```bash
+  npm run test
+```
 
 ### Deployment
 
 To build this project, run :
 
 ```bash
-  bun run build
+  npm run check
+  npm run build
 ```
 
 A new `dist` folder will appear containing the entire compiled website.
@@ -107,8 +117,6 @@ A new `dist` folder will appear containing the entire compiled website.
 ## Feedback
 
 If you have any feedback, please reach out to us at [contact@minarox.fr](mailto:contact@minarox.fr).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Author
 
