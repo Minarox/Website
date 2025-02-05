@@ -15,7 +15,7 @@ const { social } = Astro.props;
 <section>
 	{social.map((item) => (
 		<a href={item.url} title={item.name} aria-label={item.name}>
-			<Icon name={item?.icon || item.name.toLowerCase()} />
+			<Icon name={`fa6-brands:${item?.icon || item.name.toLowerCase()}`} />
 		</a>
 	))}
 </section>

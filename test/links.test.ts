@@ -14,7 +14,7 @@ const social = [
 	{
 		name: "X",
 		url: "https://x.com/Minarox_",
-		icon: "twitter"
+		icon: "x-twitter"
 	},
 	{
 		name: "Instagram",
@@ -37,6 +37,6 @@ test('Array of links', async () => {
 	for (const link of social) {
 		expect(component).toContain(link.name);
 		expect(component).toContain(link.url);
-		expect(component).toContain(`data-icon="${link.icon || link.name.toLowerCase()}"`);
+		expect(component).toContain(`data-icon="fa6-brands:${link.icon || link.name.toLowerCase()}"`);
 	}
 })
