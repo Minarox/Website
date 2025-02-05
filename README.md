@@ -64,7 +64,7 @@ Minarox website with links to the different social networks.
 | Color                        | Hex                                                                           | Description                   |
 |------------------------------|-------------------------------------------------------------------------------|-------------------------------|
 | Text color                   | <img valign='middle' alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> `#FFFFFF` | Titles and subtitles          |
-| Background color             | <img valign='middle' alt='blue' src='https://readme-swatches.vercel.app/393939?style=round'/> `#393939` | Global background             |
+| Background color             | <img valign='middle' alt='blue' src='https://readme-swatches.vercel.app/040e29?style=round'/> `#040e29` | Global background             |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
