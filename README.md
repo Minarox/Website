@@ -35,6 +35,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#run-locally">Run Locally</a></li>
+        <li><a href="#deployment">Tests</a></li>
         <li><a href="#deployment">Deployment</a></li>
       </ul>
     </li>
@@ -91,6 +92,14 @@ Minarox website with links to the different social networks.
 ```
 
 The server should start on [localhost:4321](http://localhost:4321/).
+
+### Tests
+
+To execute tests, run :
+
+```bash
+  npm run test
+```
 
 ### Deployment
 
