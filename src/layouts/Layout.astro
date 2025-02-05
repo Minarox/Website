@@ -2,6 +2,7 @@
 import { SEO } from "astro-seo";
 import { AstroFont } from "astro-font";
 import Logo from '@assets/logo.svg';
+import Banner from '@assets/banner.webp';
 ---
 
 <!doctype html>
@@ -17,14 +18,14 @@ import Logo from '@assets/logo.svg';
 			title: "Minarox.fr",
 			type: "website",
 			url: Astro.url.origin,
-			image: "/favicon/banner.webp"
+			image: Banner.src
 		},
 		optional: {
 			locale: "fr_FR",
 		},
 		image: {
 			alt: "Minarox.fr banner",
-			url: "/favicon/banner.webp",
+			url: Banner.src,
 			type: "image/webp"
 		}
 	}}
@@ -34,7 +35,7 @@ import Logo from '@assets/logo.svg';
 		site: Astro.url.origin,
 		title: "Minarox.fr",
 		description: "Créateur de contenu depuis trop longtemps.",
-		image: "/favicon/banner.webp",
+		image: Banner.src,
 		imageAlt: "Minarox.fr banner",
 	}}
 	extend={{
