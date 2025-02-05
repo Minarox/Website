@@ -1,28 +1,21 @@
 import { test, expect } from 'vitest';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
-import Links from '../src/components/Links.astro';
+import Links, { type Props } from '../src/components/Links.astro';
 
-const social = [
+const social: Props['social'] = [
 	{
 		name: "YouTube",
-		url: "https://youtube.com/@Minarox",
-	},
-	{
-		name: "Twitch",
-		url: "https://twitch.tv/minarox",
+		url: "https://youtube.com/@Minarox"
 	},
 	{
 		name: "X",
 		url: "https://x.com/Minarox_",
-		icon: "x-twitter"
+		icon: "fa6-brands:x-twitter"
 	},
 	{
-		name: "Instagram",
-		url: "https://instagram.com/minarox_",
-	},
-	{
-		name: "GitHub",
-		url: "https://github.com/Minarox",
+		name: "Email",
+		url: "mailto:contact@minarox.fr",
+		icon: "mdi:envelope"
 	}
 ]
 
@@ -37,6 +30,6 @@ test('Array of links', async () => {
 	for (const link of social) {
 		expect(component).toContain(link.name);
 		expect(component).toContain(link.url);
-		expect(component).toContain(`data-icon="fa6-brands:${link.icon || link.name.toLowerCase()}"`);
+		expect(component).toContain(`data-icon="${link.icon || `fa6-brands:${link.name.toLowerCase()}`}"`);
 	}
 })
