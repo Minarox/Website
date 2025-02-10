@@ -5,6 +5,8 @@ import Logo from '@assets/logo.svg';
 import Banner from '@assets/banner.webp';
 import Background from '@assets/background.svg';
 
+const title: string = "Minarox.fr"
+const description: string = "Créateur de contenu depuis trop longtemps."
 const background: string = `url(${Background.src})`;
 ---
 
@@ -13,12 +15,12 @@ const background: string = `url(${Background.src})`;
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<SEO
-	title="Minarox.fr"
-	description="Créateur de contenu depuis trop longtemps.",
+	title={title}
+	description={description},
 	charset="UTF-8"
 	openGraph={{
 		basic: {
-			title: "Minarox.fr",
+			title: title,
 			type: "website",
 			url: Astro.url.origin,
 			image: Banner.src
@@ -27,7 +29,7 @@ const background: string = `url(${Background.src})`;
 			locale: "fr_FR",
 		},
 		image: {
-			alt: "Minarox.fr banner",
+			alt: `${title} banner`,
 			url: Banner.src,
 			type: "image/webp"
 		}
@@ -36,10 +38,10 @@ const background: string = `url(${Background.src})`;
 		creator: "@Minarox_",
 		card: "summary_large_image",
 		site: Astro.url.origin,
-		title: "Minarox.fr",
-		description: "Créateur de contenu depuis trop longtemps.",
+		title: title,
+		description: description,
 		image: Banner.src,
-		imageAlt: "Minarox.fr banner",
+		imageAlt: `${title} banner`,
 	}}
 	extend={{
 		link: [

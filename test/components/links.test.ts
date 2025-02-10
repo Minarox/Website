@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
-import Links, { type Props } from '../src/components/Links.astro';
+import Links, { type Props } from '@components/Links.astro';
 
 const social: Props['social'] = [
 	{
@@ -20,8 +20,8 @@ const social: Props['social'] = [
 ]
 
 test('Array of links', async () => {
-	const container = await AstroContainer.create();
-	const component = await container.renderToString(Links, {
+	const container: AstroContainer = await AstroContainer.create();
+	const component: string = await container.renderToString(Links, {
 		props: {
 			social: social
 		}
