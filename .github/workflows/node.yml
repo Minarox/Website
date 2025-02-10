@@ -13,6 +13,11 @@ concurrency:
 jobs:
     build:
         runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            pull-requests: write
+
         steps:
             - name: Checkout project
               uses: actions/checkout@v4
@@ -33,6 +38,16 @@ jobs:
 
             - name: Check types
               run: npm run check
+
+            - name: Run tests
+              run: npm run test:coverage
+
+            - name: Report coverage
+              if: always() 
+              uses: davelosert/vitest-coverage-report-action@v2
+              with:
+                name: 'Website'
+                file-coverage-mode: 'all'
 
             - name: Build website
               run: npm run build
