@@ -8,5 +8,5 @@ import compressor from 'astro-compressor';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://minarox.fr',
-    integrations: [sitemap(), metaTags(), icon(), compressor()]
+    integrations: [sitemap(), metaTags(), icon(), compressor({ gzip: false })]
 });
