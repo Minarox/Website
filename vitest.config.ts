@@ -7,7 +7,7 @@ export default getViteConfig({
         include: ["test/**/*.test.ts"],
         exclude: [...configDefaults.exclude],
         coverage: {
-            reporter: ["text", "json-summary", "json"],
+            reporter: ["text", "json-summary", "json", "html"],
             include: ["src/**/*"],
             reportOnFailure: true,
             thresholds: {

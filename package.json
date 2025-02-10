@@ -27,7 +27,8 @@
         "preview": "astro preview",
         "test": "vitest run",
         "test:watch": "vitest",
-        "test:coverage": "vitest run --coverage"
+        "test:coverage": "vitest run --coverage",
+        "test:report": "vite preview --outDir ./coverage"
     },
     "dependencies": {
         "@astrojs/sitemap": "^3.2.1",
