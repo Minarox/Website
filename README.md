@@ -1,14 +1,14 @@
 <div align="center">
-  <img src=".github/logo.svg" alt="Linkhub logo" width="112px">
+  <img src=".github/logo.svg" alt="Minarox logo" width="112px">
 
-  <h1>Linkub</h1>
+  <h1>Website</h1>
 
-  <a href="https://github.com/Minarox/Linkub">Linkub</a> is a simple web page that lists all your links to other sites. <br />
-  <a href="https://minarox.github.io/Linkub"><b>Demo »</b></a>
+  This website is a real usecase of <a href="https://github.com/Minarox/Linkub">Linkub</a> to share all my links on a simple page.
+  <a href="https://minarox.fr"><b>Visit »</b></a>
 
   <div align="center">
-    <a href="https://minarox.github.io/Linkub">
-      <img src=".github/screenshot.webp" alt="Linkub demo screenshoot">
+    <a href="https://minarox.fr">
+      <img src=".github/screenshot.webp" alt="Website demo screenshoot">
     </a>
   </div>
 
@@ -91,6 +91,13 @@ The final website is located inside `build/` and is ready to deploy online!
 - [Astro](https://astro.build/)
 - [Iconify](https://iconify.design/)
 - [Vitest](https://vitest.dev/)
+
+## 🎨 Color Reference
+
+| Color                        | Hex                                                                    | Description                   |
+| :--------------------------- | :--------------------------------------------------------------------- |:----------------------------- |
+| Text color                   | ![#FFFFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFFFF` | Titles and subtitles          |
+| Background color             | ![#040E29FF](https://placehold.co/15x15/040E29/040E29.png) `#040E29FF` | Global background             |
 
 ## ⚙️ Scripts
 

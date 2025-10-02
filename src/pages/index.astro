@@ -2,45 +2,45 @@
 import Layout from "@layouts/Layout.astro"
 import Links from "@components/Links.astro"
 import Logo from "@assets/svg/logo.svg"
-import Background from "@assets/svg/background.svg"
+import Banner from "@assets/banner.webp"
 import type { Settings, Link } from "@types"
 
 const settings: Settings = {
-	lang: ["en", "en-US", "English"],
-	title: "Linkub",
-	description: "All links in one place.",
-	keywords: "Linkhub, Link, Social, Media, Hub, Landing, Page, Web",
+	lang: ["fr", "fr-FR", "French"],
+	title: "Minarox",
+	description: "Créateur de contenu depuis trop longtemps.",
+	keywords: "Vidéos, Stream, Live, Youtube, Twitch, Best-of, Compilations, Montage, Projets, Site, Web",
 	creator: "Mathis Serrieres Maniecki",
 	xCreator: "Minarox_",
-	themeColor: "#0C1136",
-	thumbnail: Background
+	themeColor: "#040E29",
+	thumbnail: Banner
 }
 
 const links: Link[] = [
 	{
 		name: "YouTube",
-		url: "https://youtube.com"
+		url: "https://youtube.com/@Minarox",
 	},
 	{
 		name: "Twitch",
-		url: "https://twitch.tv"
+		url: "https://twitch.tv/minarox",
 	},
 	{
 		name: "X",
-		url: "https://x.com",
+		url: "https://x.com/Minarox_",
 		icon: "x-twitter"
 	},
 	{
 		name: "Instagram",
-		url: "https://instagram.com"
+		url: "https://instagram.com/minarox_",
 	},
 	{
 		name: "GitHub",
-		url: "https://github.com"
+		url: "https://github.com/Minarox",
 	},
 	{
 		name: "Email",
-		url: "mailto:contact@example.com",
+		url: "mailto:contact@minarox.fr",
 		icon: "envelope",
 		pack: "mdi"
 	}
@@ -79,6 +79,7 @@ const links: Link[] = [
 				max-height: 140px;
 				padding: 0.5rem;
 				color: white;
+				filter: drop-shadow(0 0 42px rgba(0, 0, 0, 0.7));
 			}
 
 			h1 {

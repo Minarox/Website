@@ -5,7 +5,7 @@ import Index from "@pages/index.astro"
 test("Landing page", async () => {
 	const container: AstroContainer = await AstroContainer.create()
 	const component: Response = await container.renderToResponse(Index)
-	const title: string = "Linkub"
+	const title: string = "Minarox"
 
 	expect(component.status).toBe(200)
 	expect(component.headers.get("Content-Type")).toBe("text/html")
