@@ -1,0 +1,16 @@
+// https://developers.cloudflare.com/workers/wrangler/configuration/
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "minarox-website",
+	"workers_dev": false,
+	"compatibility_date": "2025-10-01",
+	"assets": {
+		"directory": "./dist"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"placement": {
+		"mode": "smart"
+	}
+}

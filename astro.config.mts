@@ -6,9 +6,7 @@ import compressor from "astro-compressor"
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://minarox.github.io",
-    base: "/Linkub",
-    outDir: "./build",
+    site: "https://minarox.fr",
     integrations: [sitemap(), metaTags(), icon(), compressor({ gzip: false })],
     server: {
         host: "127.0.0.1"

@@ -91,6 +91,7 @@ The final website is located inside `build/` and is ready to deploy online!
 - [Astro](https://astro.build/)
 - [Iconify](https://iconify.design/)
 - [Vitest](https://vitest.dev/)
+- [Wrangler](https://developers.cloudflare.com/workers/wrangler/)
 
 ## 🎨 Color Reference
 
@@ -109,10 +110,11 @@ You can also use [npm](https://www.npmjs.com) but you have to edit commands from
 | `pnpm install`    | Installs dependencies                                     |
 | `pnpm dev`        | Starts local dev server at `localhost:4321`               |
 | `pnpm check`      | Scan source files for warnings and errors                 |
-| `pnpm build`      | Build your production site to `./dist/`                   |
-| `pnpm preview`    | Preview your build locally at `localhost:4321`            |
 | `pnpm test`       | Run unit tests                                            |
 | `pnpm coverage`   | Preview code coverage from unit tests at `localhost:4173` |
+| `pnpm build`      | Build your production site to `./dist/`                   |
+| `pnpm preview`    | Preview your build locally at `localhost:4321`            |
+| `pnpm deploy`     | Build and deploy project to Cloudflare Workers            |
 
 ## 💁‍♀️ Q&A
 
