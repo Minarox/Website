@@ -1,0 +1,149 @@
+---
+import { SEO } from "astro-seo"
+import { AstroFont } from "astro-font"
+import Logo from "@assets/svg/logo.svg"
+import Background from "@assets/svg/background.svg"
+import LatoRegular from "@assets/font/Lato-Regular.ttf"
+import LatoBold from "@assets/font/Lato-Bold.ttf"
+import type { Settings } from "@types"
+
+const { lang, title, description, keywords, creator, xCreator, themeColor, thumbnail } = Astro.props.settings as Settings
+const background: string = `url(${Background.src})`
+---
+
+<!doctype html>
+<html lang={lang[0] || "en"}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<SEO
+			title={`${title} - ${description}`}
+			description={description}
+			charset="UTF-8"
+			openGraph={{
+				basic: {
+					title,
+					type: "website",
+					url: Astro.url.origin,
+					image: thumbnail?.src || Background.src
+				},
+				optional: {
+					locale: lang[1] || "en-US",
+					siteName: title,
+					description
+				},
+				image: {
+					alt: `${title} banner`,
+					url: thumbnail?.src || Background.src,
+					type: "image/webp"
+				}
+			}}
+			twitter={{
+				creator: `@${xCreator}`,
+				card: "summary_large_image",
+				site: Astro.url.origin,
+				title,
+				description,
+				image: thumbnail?.src || Background.src,
+				imageAlt: `${title} banner`
+			}}
+			extend={{
+				link: [
+					{ rel: "icon", type: "image/svg+xml", href: Logo.src },
+					{ rel: "sitemap", href: "/sitemap-index.xml" }
+				],
+				meta: [
+					{ name: "viewport", content: "width=device-width, initial-scale=1.0" },
+					{ name: "theme-color", content: themeColor },
+					{ name: "keywords", content: keywords },
+					{ name: "robots", content: "index, follow" },
+					{ name: "language", content: lang[2] || "English" },
+					{ name: "author", content: creator }
+				]
+			}}
+		/>
+
+		<AstroFont
+			config={[
+				{
+					name: "Lato",
+					src: [
+					{
+						style: "normal",
+						weight: 400,
+						path: LatoRegular.slice(1)
+					},
+					{
+						style: "bold",
+						weight: 700,
+						path: LatoBold.slice(1)
+					},
+					],
+					preload: true,
+					display: "swap",
+					selector: "body",
+					fallback: "sans-serif",
+				}
+			]}
+		/>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style define:vars={{ background, themeColor }}>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	::-webkit-scrollbar {
+		width: 14px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		box-shadow: inset 0 0 14px 14px white;
+		border: solid 4px transparent;
+		border-radius: 14px;
+	}
+
+	::-webkit-scrollbar-button {
+		display: none;
+	}
+
+	body {
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		scroll-behavior: smooth;
+		overflow: overlay;
+		font-family: "Lato", "Helvetica", "Arial", sans-serif;
+		font-weight: 400;
+		color: white;
+		text-align: center;
+		text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+		background-image: var(--background);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-color: var(--themeColor);
+
+		img {
+			-webkit-user-drag: none;
+			-khtml-user-drag: none;
+			-moz-user-drag: none;
+			-o-user-drag: none;
+			user-drag: none;
+		}
+	}
+</style>

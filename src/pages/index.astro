@@ -1,0 +1,91 @@
+---
+import Layout from "@layouts/Layout.astro"
+import Links from "@components/Links.astro"
+import Logo from "@assets/svg/logo.svg"
+import Background from "@assets/svg/background.svg"
+import type { Settings, Link } from "@types"
+
+const settings: Settings = {
+	lang: ["en", "en-US", "English"],
+	title: "Linkub",
+	description: "All links in one place.",
+	keywords: "Linkhub, Link, Social, Media, Hub, Landing, Page, Web",
+	creator: "Mathis Serrieres Maniecki",
+	xCreator: "Minarox_",
+	themeColor: "#0C1136",
+	thumbnail: Background
+}
+
+const links: Link[] = [
+	{
+		name: "YouTube",
+		url: "https://youtube.com"
+	},
+	{
+		name: "Twitch",
+		url: "https://twitch.tv"
+	},
+	{
+		name: "X",
+		url: "https://x.com",
+		icon: "x-twitter"
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com"
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com"
+	},
+	{
+		name: "Email",
+		url: "mailto:contact@example.com",
+		icon: "envelope",
+		pack: "mdi"
+	}
+]
+---
+
+<Layout settings={settings}>
+	<main>
+		<header>
+			<Logo />
+			<h1>{settings.title}</h1>
+		</header>
+
+		<article>
+			<Links links={links} />
+		</article>
+	</main>
+</Layout>
+
+<style>
+	main {
+		width: 100vw;
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 0.6fr 1fr;
+		align-items: center;
+		justify-items: center;
+
+		header {
+			padding: 1rem;
+
+			svg {
+				width: auto;
+				max-width: 140px;
+				height: auto;
+				max-height: 140px;
+				padding: 0.5rem;
+				color: white;
+			}
+
+			h1 {
+				margin: 0;
+				font-size: 2em;
+				font-weight: 700;
+			}
+		}
+	}
+</style>
