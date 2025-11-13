@@ -90,6 +90,15 @@ const background: string = `url(${Background.src})`
 	<body>
 		<slot />
 	</body>
+
+	<script>
+		import { init } from '@plausible-analytics/tracker'
+
+		init({
+			domain: 'plausible.minarox.fr',
+			outboundLinks: true
+		})
+	</script>
 </html>
 
 <style define:vars={{ background, themeColor }}>
