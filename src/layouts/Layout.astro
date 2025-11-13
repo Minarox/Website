@@ -1,6 +1,7 @@
 ---
 import { SEO } from "astro-seo"
 import { AstroFont } from "astro-font"
+import Plausible from "@components/Plausible.astro"
 import Logo from "@assets/svg/logo.svg"
 import Background from "@assets/svg/background.svg"
 import LatoRegular from "@assets/font/Lato-Regular.ttf"
@@ -87,9 +88,12 @@ const background: string = `url(${Background.src})`
 			]}
 		/>
 	</head>
+
 	<body>
 		<slot />
 	</body>
+
+	<Plausible />
 </html>
 
 <style define:vars={{ background, themeColor }}>
